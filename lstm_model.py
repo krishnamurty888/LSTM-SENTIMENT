@@ -150,7 +150,7 @@ def create_advanced_lstm_model(vocab_size, embedding_matrix, max_length=MAX_SEQU
     
     # Dense layers
     x = Dropout(0.4)(concat)
-    x = Dense(64, activation='relu')(x)
+    x = Dense(32, activation='relu')(x)
     x = Dropout(0.3)(x)
     
     # Output
@@ -214,8 +214,8 @@ def print_model_summary(model):
 if __name__ == "__main__":
     # Test model creation
     vocab_size = 20000
-    embedding_dim = 100
-    max_length = 100
+    embedding_dim = 50
+    max_length = 50
     
     # Create dummy embedding matrix
     embedding_matrix = np.random.randn(vocab_size, embedding_dim)
